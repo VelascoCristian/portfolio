@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section id="section-A">
+            <div class="left">
+                <div>
+                    <a href="TPO.pdf"><img src="cv.png" class="left__cv" alt="curriculum"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="contact.png" class="left__mail" alt="contact"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="linkedin.png" class="left__linkedin" alt="linkedin"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="github.png" class="left__github" alt="github"></a>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="aboutMe">
+                        <div class="aboutMe__text-top">
+                            <div class="aboutMe__line">
+                                <span class="aboutMe__myName small">Hi I'm</span>
+                                <span class="aboutMe__myName">Cristian Velasco</span>
+                            </div>
+                        </div>
+                        <div class="aboutMe__text-top">
+                            <div class="aboutMe__position">Front End Developer</div>
+                        </div>
+                    <h3 class="aboutMe__phrase">Be positive!</h3>
+                    <h3 class="aboutMe__activities">I am passionate about technology,<br> learning new things,<br> solving problems and programming.<br> Curious about footing and nature</h3>
+                </div>
+            </div>
+            <div class ="right">
+                <div class ="wind--A"></div>
+                <div class ="wind--B"></div>
+                <div class ="bigLeave"></div>
+                <div class ="smallLeave-fall"></div>
+                <div class ="smallLeave-fall--B"></div>
+                <img src="meowText.svg" class="meowText" alt="cat meowing">
+                <div class="helpCat" onclick="nextDialogue()">
+                    <h3 class="helpCat__text">Can you help me, please? <br><b class="highlightText">[Click here]</b></h3>
+                    <h3 class="helpCat__text--hidden">Can you open the door? <br>[Click the door]⮥</h3>
+                </div>
+                <span class="helpCat__fakeDoor" onclick="openTheDoor('section-B')"></span>
+                <span class="helpCat__doorOpen"></span>
+                <div class="section-A--cat"></div>
+                <div class="section-A--cat2"></div>
+            </div>           
+        </section>
+        <section id="section-B">
+            <div class="left">
+                <div>
+                    <a href="TPO.pdf"><img src="cv.png" class="left__cv" alt="curriculum"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="contact.png" class="left__mail" alt="contact"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="linkedin.png" class="left__linkedin" alt="linkedin"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="github.png" class="left__github" alt="github"></a>
+                </div>
+                
+            </div>
+            <div class="livingRoom">
+                <button type="button" class="btn__goBack" onclick="goBack('section-A')"></button>
+                <div class="window">
+                    <span class="cloud--A"></span>
+                    <span class="cloud--B"></span>
+                    <span class="clouds"></span>
+                    <span class="bird"></span>
+                    <span class="frameFix--A"></span>
+                    <span class="frameFix--B"></span>
+                    <span class="frameFix--C"></span>
+                </div>
+                <span class="technologiesPennants"></span>
+                <span class="softSkillsPennants"></span>
+                <span class="softSkillBoard" onclick="softSkillModal()""></span>
+                <span class="helpCat-BowlFood" onclick="fill()"></span>
+                <span class="helpCat-food"></span>
+                <span class="pointer"></span>
+                <span class="pointerOut" onclick="hardSkillModal()"></span>
+                <div class="helpCat-foodText">
+                    <h3 class="helpCat__text" id="helpCat__text">Oh no, the bowl is empty, can you fill it? ⭩[Click the blue bowl]</h3>
+                </div>
+                <img src="purrText.svg" id="purrText" class="hidden" alt="cat purring">
+                <span id="modal"></span>
+                <div id="modal__elements"></div>
+                <button type="button" class="btn__closeModal" onclick="closeModal()"></button>
+            </div>
+        </section>
+        <section id="section-C">
+            <div class="left">
+                <div>
+                    <a href="TPO.pdf"><img src="cv.png" class="left__cv" alt="curriculum"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="contact.png" class="left__mail" alt="contact"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="linkedin.png" class="left__linkedin" alt="linkedin"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="github.png" class="left__github" alt="github"></a>
+                </div>
+            </div>
+            <div class="bedRoom">
+                <span class="aboutMe__phrase thanks">Thanks for watching</span>
+                <span class="toyMouse" onclick="moveMouse()"></span>
+                <span class="pointer3"></span>
+                <span class="messyBooks" onclick="orderBooks()"></span>
+                <span class="pet" onclick="touch()"></span>
+                <span class="monitor">
+                    <div class="titleProyect">Proyects</div>
+                    <span class="table"></span>
+                    <span class="previous"></span>
+                    <span class="goOn"></span>
+                </span>
+            </div>
+        </section>
+        
+        <section id="section-D">Página 4</section>
+        <section id="section-E">Página 5</section>   
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
