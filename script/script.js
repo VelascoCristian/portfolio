@@ -119,6 +119,8 @@ const intervalCatMoveB = setInterval(catMoveB, 800);
 const goBack = (section) => {
     document.getElementById(section).scrollIntoView();
     if (section === "section-A") {
+        document.querySelector(".contact").style.display = "none";
+        document.querySelector(".btn__goBackForm").style.display = "none";
         document.querySelector(".helpCat__text").style.display = "block";
         document.querySelector(".helpCat").style.setProperty("cursor","pointer");
         document.querySelector(".helpCat__text--hidden").style.display = "none";
@@ -153,6 +155,7 @@ const goBack = (section) => {
     }
 
     if (section === "section-B") {
+        
         document.querySelector(".toyMouse").style.setProperty("display","none");
         document.querySelector(".thanks").style.setProperty("display","none");
         document.querySelector(".pointer3").style.setProperty("display","none");
@@ -164,6 +167,7 @@ const goBack = (section) => {
         section2Animation();
         document.querySelector(".helpCat-BowlFood").style.setProperty("animation","none 6s ease");
         document.querySelector(".bedRoom").style.setProperty("animation","none 5s");
+        document.querySelector(".pet").style.setProperty("display","none");
     }
 }
 
@@ -468,13 +472,41 @@ const goToContact = (section) => {
         document.querySelector(".meowText").style.display = "none";
         document.querySelector(".section-A--cat").style.display = "none";
         document.querySelector(".section-A--cat2").style.display = "none";
-        clearInterval(intervalCatMoveA);
-        clearInterval(intervalCatMoveB);
+        document.querySelector(".helpCat__fakeDoor").style.display = "none";
     } else if (section === "section-B") {
-        /* ACAACACCACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+        document.querySelector(".pointerOut").style.display = "none";
+        document.querySelector(".cloud--A").style.setProperty("display","none");
+        document.querySelector(".cloud--B").style.setProperty("display","none");
+        document.querySelector(".clouds").style.setProperty("display","none");
+        document.querySelector(".frameFix--A").style.setProperty("display","none");
+        document.querySelector(".frameFix--B").style.setProperty("display","none");
+        document.querySelector(".frameFix--C").style.setProperty("display","none");
+        document.querySelector(".bird").style.setProperty("display","none");
+        document.querySelector(".technologiesPennants").style.setProperty("display","none");
+        document.querySelector(".softSkillsPennants").style.setProperty("display","none");
+        document.querySelector(".pointer").style.setProperty("display","none");
+        document.querySelector(".helpCat-food").style.setProperty("display","none");
+        document.querySelector(".helpCat-BowlFood").style.setProperty("display","none");
+        document.querySelector(".helpCat-foodText").style.setProperty("display","none");
+        document.querySelector(".softSkillBoard").style.setProperty("display","none");
+    } else if (section === "section-C") {
+        
+        document.querySelector(".pointer3").style.setProperty("display","none");
+        document.querySelector(".thanks").style.setProperty("display","none");
+        document.querySelector(".messyBooks").style.setProperty("display","none");
+        document.querySelector(".toyMouse").style.setProperty("display","none");
+        document.querySelector(".pet").style.setProperty("display","none");
+        document.querySelector(".monitor").style.setProperty("display","none");
+        document.querySelector(".goOn").style.setProperty("display","none");
+        document.querySelector(".previous").style.setProperty("display","none");
+        document.querySelector(".titleProyect").style.setProperty("display","none");
+        document.querySelector(".bedRoom").style.setProperty("animation","none 5s");
     }
-
-    
+    clearInterval(intervalCatMoveABack);
+    clearInterval(intervalCatMoveBBack);
+    clearInterval(intervalCatMoveA);
+    clearInterval(intervalCatMoveB);
+    document.querySelector(".btn__goBackForm").style.display = "block";
     document.querySelector(".contact").style.display = "block";
 }
 
@@ -504,7 +536,7 @@ function showErrorMessage(typeOfInput, input) {
             console.log(typeOfInput, error);
             console.log(input.validity[error]);
             console.log(errorMessage[typeOfInput][error]);
-        message = errorMessage[typeOfInput][error];
+            message = errorMessage[typeOfInput][error];
         }
     });
     return message;
@@ -539,6 +571,5 @@ textareas.forEach((textarea) => {
 });
 
 const send = () => {
-    alert("Message sent");
+    alert("Mail sent");
 }
-
