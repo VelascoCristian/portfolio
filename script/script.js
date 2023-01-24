@@ -17,6 +17,8 @@ const goToSection = (section) => {
     } else if (section === "section-C") {
         document.getElementById(section).scrollIntoView({behavior: "smooth"});
         section3Animation();
+    } else if (section === "section-D") {
+        document.getElementById(section).scrollIntoView({behavior: "smooth"});
     }
 }
 
@@ -298,13 +300,17 @@ const monitor = () => {
     document.querySelector(".monitor").style.setProperty("display","block");
 }
 
+const borderPet = () => {
+    document.querySelector(".pet").style.setProperty("display","block");
+}
+
 document.getElementById("messyBooks").onclick = function(){
     document.querySelector(".messyBooks").style.setProperty("display","none");
     document.querySelector(".pointer3").style.setProperty("display","none");
     document.querySelector(".thanks").style.setProperty("display","none");
     document.querySelector(".toyMouse").style.setProperty("display","none");
     setTimeout(walk, 500);
-    document.querySelector(".pet").style.setProperty("display","block");
+    setTimeout(borderPet, 5000);
     setTimeout(monitor, 6000);
 }
 
@@ -318,7 +324,221 @@ const touch = () => {
     setTimeout(sleep,2250);
 }
 
+/* Monitor proyects */
+
+const attachEvents = () => {
+
+    let badge = document.querySelector(".badge");
+    let caption = document.querySelector(".monitorFigcaption");
+    let details = document.querySelector(".details");
+    let detailsContent = document.querySelector(".details__content");
+    let front = document.querySelector(".front");
+    let back = document.querySelector(".back");
+    let showFrontBtn = document.querySelector("#show-front");
+    let showBackBtn = document.querySelector("#show-back");
+    
+caption.addEventListener("mouseover", function () {
+    let contentHeight = detailsContent.offsetHeight;
+    details.style.height = contentHeight + 10 + "px";
+    badge.innerHTML = "<img src='images/minus.png' class='minus' alt='minus'>";
+});
+
+caption.addEventListener("mouseout", function () {
+    details.style.height = 0;
+    badge.innerHTML = "<img src='images/plus.png' class='minus' alt='plus'>";
+});
+
+showBackBtn.addEventListener("click", function () {
+    back.style.transform = "perspective( 2000px ) rotateY( 0deg )";
+    front.style.transform = "perspective( 2000px ) rotateY( -180deg )";
+});
+
+showFrontBtn.addEventListener("click", function () {
+    front.style.transform = "perspective( 2000px ) rotateY( 0deg )";
+    back.style.transform = "perspective( 2000px ) rotateY( 180deg )";
+});
+}
+
+let totalProyects = 3, proyect = 0;
+attachEvents();
+
+document.querySelector(".goOn").addEventListener('click', function() {
+    proyect++;
+    
+    if (proyect === (totalProyects)) proyect = 0;
+    if (proyect === 0) {
+        //HangMan game
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Hangman game (Spanish).</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                Using a row of dashes, the word to be guessed is represented, giving the number of letters (in the form of dashes). If the guessing player suggests a letter that appears in the word, the other player writes it in all its correct positions. If the letter is not correct, it is shown on the hanged stickman figure as a tally mark.<br>
+                · More than 40 words.<br>
+                · You have 7 attempts per word.<br>
+                · It does not have words that use "ñ" or umlauts.<br>
+                · Possibility to add your own word.<br>
+                Can you save the person?... Let's find out.
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://velascocristian.github.io/Juego-del-ahorcado/" target="_blank"><img class="imgProyect" src="images/proyectHangGame.png" alt="hangman game"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Hangman game.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">The classic hangman game. HTML5 - CSS3 - JAVASCRIPT.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`;
+    } else if (proyect === 1) {
+        // Encrypter
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Simple Encrypter.</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                'The encryption "keys" used are the following: <br>
+                ·The letter "e" is converted to "enter" <br>
+                ·The letter "i" is converted to "imes" <br>
+                ·The letter "a" is converted to "ai" <br>
+                ·The letter "o" is converted to "ober" <br>
+                ·The letter "u" is converted to "ufat" <br>
+                <br>Requirements: <br>
+                ·Uppercase letters are set to lowercase <br>
+                ·Special characters are ignored';
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://velascocristian.github.io/Encriptador/" target="_blank"><img class="imgProyect" src="images/proyectEncrypter.png" alt="Encrypter"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Encrypter.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">A simple tool capable of encrypting and/or a string of text. HTML5 - CSS3 - JAVASCRIPT.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`;
+    } else if (proyect === 2) {
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Personal Github.</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                I will upload more projects soon, while you have a look in my Github repository.
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://github.com/VelascoCristian" target="_blank"><img class="imgProyect" src="images/proyectSoon.png" alt="myGithub"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Personal Github.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">While you have a look in my Github repository.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`
+    }
+    attachEvents();
+});
+
+const goToContact = (section) => {
+
+    if (section === "section-A") {
+        document.querySelector(".wind--A").style.display = "none";
+        document.querySelector(".wind--B").style.display = "none";
+        document.querySelector(".bigLeave").style.display = "none";
+        document.querySelector(".smallLeave-fall").style.display = "none";
+        document.querySelector(".smallLeave-fall--B").style.display = "none";
+        document.querySelector(".meowText").style.display = "none";
+        document.querySelector(".section-A--cat").style.display = "none";
+        document.querySelector(".section-A--cat2").style.display = "none";
+        clearInterval(intervalCatMoveA);
+        clearInterval(intervalCatMoveB);
+    } else if (section === "section-B") {
+        /* ACAACACCACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+    }
+
+    
+    document.querySelector(".contact").style.display = "block";
+}
+
+const typesofErrors = [
+    "valueMissing",
+    "typeMismatch",
+];
+
+const errorMessage = {
+    name: {
+        valueMissing: "The name field cannot be empty",
+    },
+    email: {
+        valueMissing: "The email field cannot be empty",
+        typeMismatch: "The email is invalid",
+    },
+    message: {
+        valueMissing: "The message field cannot be empty",
+    }
+}
 
 
+function showErrorMessage(typeOfInput, input) {
+    let message = "";
+    typesofErrors.forEach((error) => {
+        if (input.validity[error]) {
+            console.log(typeOfInput, error);
+            console.log(input.validity[error]);
+            console.log(errorMessage[typeOfInput][error]);
+        message = errorMessage[typeOfInput][error];
+        }
+    });
+    return message;
+}
 
+function validation(input) {
+    const inputType = input.dataset.type;
+    if (input.validity.valid) {
+        input.parentElement.classList.remove("form__error--invalid");
+        input.parentElement.querySelector(".form__error").innerHTML = "";
+    } else {
+        input.parentElement.classList.add("form__error--invalid");
+        input.parentElement.querySelector(".form__error").innerHTML =
+        showErrorMessage(inputType, input);
+    }
+}
+
+
+const inputs = document.querySelectorAll("input");
+const textareas = document.querySelectorAll("textarea");
+
+inputs.forEach((input) => {
+    input.addEventListener("blur", (input) => {
+        validation(input.target);
+    });
+});
+
+textareas.forEach((textarea) => {
+    textarea.addEventListener("blur", (textarea) => {
+        validation(textarea.target);
+    });
+});
+
+const send = () => {
+    alert("Message sent");
+}
 
