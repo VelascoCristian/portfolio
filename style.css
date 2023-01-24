@@ -32,6 +32,9 @@ section {
 .wrapper section:nth-child(3) {
     background: linear-gradient(90deg, rgba(221,219,27,1) 0%, rgba(187,219,50,1) 15%, rgba(175,219,57,1) 100%);
 }
+.wrapper section:nth-child(4) {
+    background: linear-gradient(90deg, rgba(221,219,27,1) 0%, rgba(187,219,50,1) 15%, rgba(175,219,57,1) 100%);
+}
 
 .left {
     display: block;
@@ -821,37 +824,30 @@ a:link {
     display: none;
     height: 25.5rem;
     left: 80vh;
-    padding-top: 1rem;
+    padding-top: 2rem;
     position: absolute;
     top: 14.5vh;
     width: 47.5rem;
 }
 
 .titleProyect {
-    background-color: rgb(235, 235, 235);
+    
+    background-color: #f69c55;
     border-radius: 15px;
-    border: 1px solid;
-    color: #f69c55;
+    color: #f2f2f2;
     font-weight: 700;
-    margin: 0 auto;
+    left: 22vw;
     padding: .5vh 1.5vh;
+    position: absolute;
+    top: .25rem;
     width: 6.25rem;
-}
-
-.table {
-    background: rgb(70, 70, 70);
-    border-radius: 8px;
-    height: 21rem;
-    margin: 2vh 3.5vh;
-    position: inherit;
-    width: 44rem;
 }
 
 .previous {
     height: 4.5vh;
     margin-left: 5vh;
-    margin-top: 3vh;
     position: absolute;
+    top: -15vh;
     width: 4.5vh;
 }
 
@@ -863,9 +859,303 @@ a:link {
     border: 2px solid #f69c55;
     border-radius: 30px;
     height: 4.5vh;
-    margin-left: 90vh;
-    margin-top: 3vh;
+    margin-left: 90.5vh;
     position: absolute;
     transition: 300ms ease-in-out;
+    top: 2vh;
     width: 4.5vh;
+}
+
+/* Monitor proyects */
+
+.monitorFigure {
+    height: 21rem;
+    margin: auto;
+    width: 44rem;
+    position: relative;
+}
+
+.front {
+    transform: perspective( 2000px ) rotateY( 0deg );
+    transition: all .3s linear;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: perspective( 2000px ) rotateY( 180deg );
+    transition: all .3s linear;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    background: rgb(235, 235, 235);
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.back__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #f69c55;
+    border-radius: 5px 5px 0 0;
+    padding: 0 40px;
+}
+
+.back__header button {
+    margin: auto 0;
+}
+
+.back p {
+    padding: 0 40px 40px 40px;
+}
+
+.monitorFigure .image {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,.2);
+}
+
+.monitorFigure img {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.monitorFigcaption {
+    padding: 10px 20px;
+    background: #fff;
+    border: 2px solid black;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    left: 40%;
+    transition: 0.2s all linear 0s;
+}
+
+.monitorFigure h4 {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.monitorFigure h4 b {
+    align-self: start;
+    color: #444;
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+.monitorFigure .details {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s all linear 0s;
+}
+
+.monitorFigure p {
+    margin: 0;
+    color: #777;
+}
+
+.monitorFigure button {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    padding: .5rem 1rem;
+}
+
+.monitorFigure button i {
+    margin-left: 1rem;
+}
+
+
+#show-back {
+    display: block;
+    margin-top: 10px;
+    background: #33ad11;
+}
+
+#show-front {
+    margin-top: auto;
+    background: #444;
+}
+
+.minus {
+    height: 1rem;
+    width: 1rem;
+}
+
+/* Contact */
+.backgroundForm {
+    background: url(images/leftBackground.svg);
+    height: 100vh;
+    width: 100vw;
+}
+
+.contact {
+    background: linear-gradient(90deg, rgba(221,219,27,1) 0%, rgba(187,219,50,1) 15%, rgba(175,219,57,1) 100%);
+    border-radius: .8rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+    height: 70vh;
+    left: 30vw;
+    padding-top: .9rem;
+    position: absolute;
+    top: 15vh;
+    width: 50vw;
+}
+
+.contact__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0 1vw;
+}
+
+.legend {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    padding: 0 2vw;
+}
+
+.form__button {
+    display: inline;
+    transform: translate(-50%, -50%);
+    margin: 0% 25%;
+}
+
+.form__button-effect {
+    position: relative;
+    width: 20rem;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: #000000;
+    color: #fdfdfd;
+    text-align: center;
+    line-height: 3rem;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 4vh;
+}
+
+.form__button-effect:before, .form__button-effect:after {
+    display: block;
+    content: ' ';
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.form__button-effect:before {
+    top: -0.125rem;
+    left: -0.1rem; 
+}
+
+.form__button-effect:after {
+    bottom: -0.125rem;
+    right: -.1rem; 
+}
+
+.form__button-effect.lines:hover:before {
+    width: 20rem;
+    height: 100%;
+    opacity: 1;
+    border-top: 0.25rem solid #8d0606;
+    border-right: 0.25rem solid #8d0606;
+    transition: width 150ms cubic-bezier(0.07, 0.62, 0.61, 1), height 75ms 150ms cubic-bezier(0.07, 0.62, 0.61, 1);
+}
+
+.form__button-effect.lines:hover:after {
+    width: 20rem;
+    height: 100%;
+    opacity: 1;
+    border-bottom: 0.25rem solid #8d0606;
+    border-left: 0.25rem solid #8d0606;
+    transition: width 150ms 225ms cubic-bezier(0.07, 0.62, 0.61, 1), height 75ms 450ms cubic-bezier(0.07, 0.62, 0.61, 1), border-left 0ms 225ms linear;
+}
+
+.form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    padding: 0 3vw;
+    position: relative;
+}
+
+.form__input {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 1.25rem;
+    padding: 1.375rem 0.5rem 0.5rem;
+    height: 3.25rem;
+    width: 100%;
+
+}
+
+.form__input::placeholder {
+    visibility: hidden;
+    color: #00000000;
+    
+}
+
+.form__input:focus {
+    outline: none;
+}
+
+.form__label {
+    position: absolute;
+    top: 1.375rem;
+    left: 0.5rem;
+    font-size: 1rem;
+    padding: 0 3vw;
+    transition: all 0.25s;
+}
+
+#message {
+    min-height: 3.2rem;
+    resize: vertical;
+    height: 9rem;
+    
+}
+
+.form__input:not(:placeholder-shown) + .form__label,
+.form__input:focus + .form__label {
+    font-size: 0.875rem;
+    top: 0.25rem;
+    transition: all 0.25s;
+    
+}
+
+.form__error--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.form__error {
+    display: none;
+}
+
+.form__error--invalid .form__error {
+    color: #8d0606;
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
 }
