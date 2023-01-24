@@ -1008,11 +1008,11 @@ a:link {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     display: none;
     height: 70vh;
-    left: 30vw;
+    left: 22.5vw;
     padding-top: .9rem;
     position: absolute;
     top: 15vh;
-    width: 50vw;
+    width: 60vw;
 }
 
 .contact__title {
@@ -1031,7 +1031,7 @@ a:link {
 .form__button {
     display: inline;
     transform: translate(-50%, -50%);
-    margin: 0% 25%;
+    margin: 0% 32.75%;
 }
 
 .form__button-effect {
@@ -1158,4 +1158,10 @@ a:link {
     display: block;
     margin-top: 0.5rem;
     padding-left: 0.5rem;
+}
+
+.btn__goBackForm {
+    display: none;
+    left: 10vw;
+    position: absolute;
 }
