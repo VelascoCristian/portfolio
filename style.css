@@ -9,6 +9,30 @@ html {
     display: none;
 }
 
+.smartPhone-container {
+    display: none;
+}
+
+.smartPhone {
+    background: linear-gradient(90deg, rgba(221,219,27,1) 0%, rgba(187,219,50,1) 15%, rgba(175,219,57,1) 100%);
+}
+
+.smartPhone-p {
+    margin-top: 2vh;
+}
+
+.device {
+    animation: turnDevice 2.25s infinite;
+    height: auto;
+    margin-top: 2vh;
+    max-width: 5rem;
+}
+
+@keyframes turnDevice {
+    0% { transform: rotate(0deg); }
+    100%   { transform: rotate(90deg); }
+}
+
 .wrapper {
     display: flex;
     overflow: auto;
@@ -1164,4 +1188,26 @@ a:link {
     display: none;
     left: 10vw;
     position: absolute;
+}
+
+/* MQ */
+@media screen and (max-width: 780px) and (orientation: portrait) {
+    .wrapper {
+        display: none;
+    }
+    .smartPhone-container {
+        display: block;
+        
+        text-align: center;
+    }
+
+    .smartPhone {
+        font-size: 2rem;
+        height: 100vh;
+        padding-top: 20vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 780px) and (orientation: landscape) {
 }
