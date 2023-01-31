@@ -194,7 +194,7 @@ section {
     position: absolute;
     height: 100px;
     width: 100vh;
-    background: url(images/breeze.svg) no-repeat ;
+    background: url(images/breeze.svg) no-repeat;
     background-position: right;
     opacity: 0%;
 }
@@ -1210,4 +1210,110 @@ a:link {
 }
 
 @media screen and (max-width: 780px) and (orientation: landscape) {
+    .left {
+        min-width: 1.65rem;
+    }
+
+    .left__cv, .left__mail, .left__linkedin, .left__github{
+        height: auto;
+        margin: 1rem .1rem;
+        max-width: 1.5rem;
+    }
+
+    .middle {
+        width: 22.75vw;
+    }
+
+    .aboutMe {
+        padding-top: .25rem;
+        padding-left: .5rem;
+    }
+
+    .aboutMe__myName, .aboutMe__position, .aboutMe__text-top {
+        font-size: 1.3rem;
+        width: 25vw;
+    }
+
+    .aboutMe__line {
+        border-bottom: .1rem solid rgba(187,219,50,1);
+        margin-bottom: 0rem;
+        width: 22vw;
+    }
+
+    .aboutMe__phrase, .aboutMe__activities {
+        font-size: .8rem;
+        padding-top: .3rem;
+        width: 25vw;
+    }
+    /* Buena idea dejar paddin entre la frase escondida*/
+
+    .right {
+        background:  url(images/houseOutside.png) no-repeat;
+        background-size: 70.5vh 34.8vw;
+        background-size: 42.5vw 70.5vh;
+        background-position: right;
+        height: 61.95vh;
+        width: 35.5vw;
+    }
+    
+    .wind--A, .wind--B {
+        background-size: 12%;
+        height: 2rem;
+        width: 20vw;
+
+
+    }
+
+    @keyframes breeze--A {
+        0%  {left: 20vh; opacity: 100%;}
+        100% {left: 81vh; opacity: 100%;}
+    }
+
+    @keyframes breeze--B {
+        0%  {left: 25vh; top: 5vh;opacity: 100%;}
+        100% {left: 85vh; top: 5vh;opacity: 100%;}
+    }
+    
+    
+    .bigLeave, .smallLeave-fall, .smallLeave-fall--B {
+        position: absolute;
+        height: 100px;
+        width: 100vh;
+        opacity: 0%;
+    }
+    /*
+    .bigLeave {
+        background: url(images/bigLeave.png) no-repeat ;
+        background-position: right;
+        animation: bigLeave 5s infinite;
+    }
+    
+    @keyframes bigLeave {
+        0%  {left: 50%; top: 35vh;opacity: 100%;transform: rotateZ(180deg);}
+        50% {left: 80%; top: 40vh;opacity: 100%;transform: rotateZ(-180deg);}
+        100% {left: 100%; top: 42vh;opacity: 100%;transform: rotateZ(-360deg);}
+    }
+    
+    .smallLeave-fall {
+        background: url(images/smallLeave.png) no-repeat ;
+        background-position: right;
+        animation: smallLeaveFall 5s infinite;
+    }
+    
+    @keyframes smallLeaveFall {
+        0%  {left: 40vh; top: 0vh;opacity: 100%;transform:perspective(300rem) rotateY(1deg);}
+        100% {left: 80vh; top: 85vh;opacity: 100%;transform:perspective(150rem) rotateY(75deg);}
+    }
+    
+    .smallLeave-fall--B {
+        background: url(images/smallLeave.png) no-repeat ;
+        background-position: right;
+        animation: smallLeaveFallB 4s infinite;
+    }
+    
+    @keyframes smallLeaveFallB {
+        0%  {left: 105vh; top: 0vh;opacity: 100%;}
+        100%  {left: 104vh; top: 50vh;opacity: 100%;transform: rotate(360deg);}
+    }
+    */
 }
