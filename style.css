@@ -33,6 +33,36 @@ html {
     100%   { transform: rotate(90deg); }
 }
 
+.adviceSmartPhone {
+    background: linear-gradient(90deg, rgba(221,219,27,1) 0%, rgba(187,219,50,1) 15%, rgba(175,219,57,1) 100%);
+    border: 1px solid black;
+    border-radius: 1.75rem;
+    display: none;
+    height: 80vh;
+    margin: 10vh 10vw;
+    position: absolute;
+    width: 80vw;
+    z-index: 1;
+}
+
+.p-advice {
+    display: none;
+    padding: 2vh 8vw;
+    text-align: center;
+}
+
+.adviceImg {
+    display: none;
+    margin: 0 auto;
+}
+
+.adviceButton {
+    border: 2px solid #f69c55;
+    border-radius: 30px;
+    display: none;
+    margin: 5vh auto;
+}
+
 .wrapper {
     display: flex;
     overflow: auto;
@@ -1209,10 +1239,11 @@ a:link {
 }
 
 @media screen and (max-width: 875px) and (orientation: landscape) {
-    .wrapper {
-        height: calc(100vh - 1rem);
-        width: 100vw;
+    .adviceSmartPhone, .adviceImg, .p-advice, .adviceButton {
+        display: block;
     }
+
+    
     
     .left {
         min-width: 4.2vw;
@@ -1225,7 +1256,7 @@ a:link {
     }
 
     .middle {
-        width: 28vw;
+        width: 45vw;
     }
 
     .aboutMe {
@@ -1234,20 +1265,24 @@ a:link {
     }
 
     .aboutMe__myName, .aboutMe__position, .aboutMe__text-top {
-        font-size: 1.3rem;
-        width: 28vw;
+        font-size: 1.75rem;
+        width: 45vw;
     }
 
     .aboutMe__line {
         border-bottom: .1rem solid rgba(187,219,50,1);
-        margin-bottom: 0rem;
-        width: 25vw;
+        margin-bottom: .1rem;
+        width: 39vw;
     }
 
     .aboutMe__phrase, .aboutMe__activities {
-        font-size: .8rem;
-        padding-top: .3rem;
-        width: 28vw;
+        font-size: 1.25rem;
+        padding-top: .5rem;
+        width: 45vw;
+    }
+
+    .aboutMe__phrase {
+        font-size: 1.5rem;
     }
     /* Buena idea dejar paddin entre la frase escondida*/
 
@@ -1324,7 +1359,6 @@ a:link {
     margin-top: 52vh;
     width: 50vh;
     }
-    
 /*
 @keyframes bounceText {
     0%   { transform: translateY(0); }
