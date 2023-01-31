@@ -430,8 +430,8 @@ section {
 
 @keyframes cloudAToRight {
     0%  {left: -8.75vh; top: 0vh;opacity: 100%;}
-    95%  {left: 16.8vh; top: 0vh;opacity: 100%;}
-    100% {left: 16.9vh; top: 0vh;visibility: hidden;}
+    95%  {left: 16.2vh; top: 0vh;opacity: 100%;}
+    100% {left: 16.3vh; top: 0vh;visibility: hidden;}
 }
 
 .cloud--B {
@@ -447,8 +447,8 @@ section {
 
 @keyframes cloudBToRight {
     0%  {left: -8.75vh; top: 10vh;opacity: 100%;}
-    95%  {left: 16.8vh; top: 10vh;opacity: 100%;}
-    100% {left: 16.9vh; top: 10vh;visibility: hidden;}
+    95%  {left: 16.2vh; top: 10vh;opacity: 100%;}
+    100% {left: 16.3vh; top: 10vh;visibility: hidden;}
 }
 
 .clouds {
@@ -464,8 +464,8 @@ section {
 
 @keyframes cloudsToRight {
     0%  {left: -8.75vh; top: 13vh;opacity: 100%;}
-    95%  {left: 16.8vh; top: 13vh;opacity: 100%;}
-    100% {left: 16.9vh; top: 13vh;visibility: hidden;}
+    95%  {left: 16.2vh; top: 13vh;opacity: 100%;}
+    100% {left: 16.3vh; top: 13vh;visibility: hidden;}
 }
 
 .bird {
@@ -1189,8 +1189,7 @@ a:link {
 #message {
     min-height: 3.2rem;
     resize: vertical;
-    height: 9rem;
-    
+    min-height: 9rem;
 }
 
 .form__input:not(:placeholder-shown) + .form__label,
@@ -1288,9 +1287,9 @@ a:link {
     
     .right {
         background:  url(images/houseOutside.png) no-repeat;
-        background-size: 61.5vw 100vh;
+        background-size: 61.75vw 100vh;
         background-position: right;
-        width: 50.5vw;
+        width: 50.75vw;
     }
     
     .wind--A, .wind--B {
@@ -1312,30 +1311,27 @@ a:link {
     
     .bigLeave, .smallLeave-fall, .smallLeave-fall--B {
         height: 1rem;
-        width: 10vw;
+        width: 2vw;
     }
 
     .bigLeave {
-        background-size: 25%;
+        background-size: 99%;
+        
     }
     
     @keyframes bigLeave {
         0%  {left: 51%; top: 30vh;opacity: 100%;transform: rotateZ(180deg);}
         50% {left: 75%; top: 35vh;opacity: 100%;transform: rotateZ(-180deg);}
-        100% {left: 100%; top: 37vh;opacity: 100%;transform: rotateZ(-360deg);}
+        100% {left: 98%; top: 37vh;opacity: 100%;transform: rotateZ(-360deg);}
     }
     
-    .smallLeave-fall {
-        background-size: 18%;
+    .smallLeave-fall, .smallLeave-fall--B {
+        background-size: 90%;
     }
     
     @keyframes smallLeaveFall {
         0%  {left: 110vh; top: 0vh;opacity: 100%;transform:perspective(300rem) rotateY(1deg);}
         100% {left: 220vh; top: 80vh;opacity: 100%;transform:perspective(150rem) rotateY(75deg);}
-    }
-    
-    .smallLeave-fall--B {
-        background-size: 18%;
     }
     
     @keyframes smallLeaveFallB {
@@ -1351,7 +1347,7 @@ a:link {
 
     .helpCat {
     border: 1px solid #f69c55;
-    font-size: .75rem;
+    font-size: .65rem;
     height: 14vh;
     justify-content: center;
     margin: 0 auto;
@@ -1366,29 +1362,107 @@ a:link {
         top: 20vh;
         width: 12.5vw;
     }
+
+    /* Section B */
     
-    /*.section-A--cat {
-        background: url(images/cat1.png) no-repeat;
-        background-size: contain;
-        display: none;
-        height: 15vh;
-        left: 72%;
-        position: absolute;
-        top: 54%;
-        transform: rotate(-7deg);
-        width: 22vh;
-    }*/
+    .btn__goBack {
+        background-size: 50%;
+        margin-left: .5vw;
+        height: 7vh;
+        width: 4.5vw;
+    }
     
-    /*.section-A--cat2 {
-        background: url(images/cat3.png) no-repeat;
-        background-size: contain;
-        display: none;
-        height: 15vh;
-        left: 73%;
-        position: absolute;
-        top: 52%;
-        transform: rotate(-6deg);
-        width: 22vh;
-    }*/
-    
+    .window {
+        margin-left: -3.25vw;
+        width: 16vw;
+    }
+
+    .cloud--A, .cloud--B, .clouds{
+        background-size: 7vw;
+        margin-left: 3vw;
+    }
+
+    .cloud--A {
+        margin-top: -2vh;
+    }
+
+    .technologiesPennants, .softSkillsPennants {
+        background-size: 62%;
+        margin-left: 3vw;
+        width: 42vw;
+    }
+
+    .softSkillsPennants {
+        margin-left: -3.5vw;
+        margin-top: -2vh;
+    }
+
+    .softSkillBoard {
+        margin-left: -5vw;
+    }
+
+    .bird {
+        background-size: 2.5vw;
+        margin-left: -.25vw;
+    }
+
+    @keyframes birdToRight {
+        0%  {left: 0vh; top: 26vh;opacity: 100%;}
+        99.9%  {left: 27vh; top: 13vh;opacity: 100%;transform: rotateY(75deg);}
+        100% {left: 27vh; top: 13vh;opacity: 0%;}
+    }
+
+    .frameFix--A {
+        margin-left: .1vw;
+        width: .375vw;
+    }
+
+    .frameFix--B, .frameFix--C {
+        height: 11vh;
+        margin-left: .1vw;
+        width: .495vw;
+    }
+
+    .helpCat-BowlFood {
+        height: 7.5vh;
+        margin-left: -5vw;
+        width: 6vw;
+    }
+
+    .pointer, .pointer3 {
+        height: 5vh;
+        margin-left: -5vw;
+        width: 4vw;
+    }
+
+    @keyframes pointerMove {
+        0% {left: 45vw; top: 55vh;}
+        5% { transform: skewX(0deg); }
+        80% { transform: skewX(0deg); }
+        85% { transform: skewX(10deg); }
+        90% { transform: skewX(-10deg); }
+        100% { transform: skewX(10deg); }
+    }
+
+    .pointerOut {
+        height: 30vh;
+        width: 25vw;
+    }
+
+    .helpCat-foodText {
+        font-size: .7rem;
+        height: 20vh;
+        margin-left: -5vw;
+        width: 32vw;
+    }
+
+    #helpCat__text {
+        margin-left: 0vw;
+        margin-top: -2.75vh;
+        width: 26vw;
+    }
+
+    .purrText {
+        margin-left: -4.5vw;
+    }
 }
