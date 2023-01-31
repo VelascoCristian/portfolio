@@ -1,3 +1,4 @@
+let isDevice = false;
 const wait = () => {}
 
 const nextDialogue = () => {
@@ -152,6 +153,14 @@ const goBack = (section) => {
         document.getElementById("purrText").classList.remove("purrText");
         intervalCatMoveABack = setInterval(catMoveA, 300);
         intervalCatMoveBBack = setInterval(catMoveB, 800);
+
+        /* Styles required for devices*/
+        if (isDevice === true) {
+            document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
+            document.querySelector(".right").style.setProperty("width","50.5vw");
+            document.querySelector(".pointerOut").style.setProperty("display","none");
+        }
+        
     }
 
     if (section === "section-B") {
@@ -575,8 +584,8 @@ const send = () => {
 }
 
 const adviceGone = () => {
-    
     document.querySelector(".adviceSmartPhone").style.display = "none"
+    isDevice = true;
 }
 
 
