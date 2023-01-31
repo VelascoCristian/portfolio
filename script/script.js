@@ -573,3 +573,10 @@ textareas.forEach((textarea) => {
 const send = () => {
     alert("Mail sent");
 }
+
+const adviceGone = () => {
+    
+    document.querySelector(".adviceSmartPhone").style.display = "none"
+}
+
+
