@@ -1197,31 +1197,35 @@ a:link {
     }
     .smartPhone-container {
         display: block;
-        
         text-align: center;
     }
 
     .smartPhone {
         font-size: 2rem;
         height: 100vh;
-        padding-top: 20vh;
+        padding: 20vh 5vw;
         width: 100vw;
     }
 }
 
-@media screen and (max-width: 780px) and (orientation: landscape) {
+@media screen and (max-width: 875px) and (orientation: landscape) {
+    .wrapper {
+        height: 100vh;
+        width: 100vw;
+    }
+    
     .left {
-        min-width: 1.65rem;
+        min-width: 4.2vw;
     }
 
     .left__cv, .left__mail, .left__linkedin, .left__github{
-        height: auto;
-        margin: 1rem .1rem;
-        max-width: 1.5rem;
+        height: 7.5vh;
+        margin: 8vh .1rem;
+        width: 4vw;
     }
 
     .middle {
-        width: 22.75vw;
+        width: 28vw;
     }
 
     .aboutMe {
@@ -1231,19 +1235,19 @@ a:link {
 
     .aboutMe__myName, .aboutMe__position, .aboutMe__text-top {
         font-size: 1.3rem;
-        width: 25vw;
+        width: 28vw;
     }
 
     .aboutMe__line {
         border-bottom: .1rem solid rgba(187,219,50,1);
         margin-bottom: 0rem;
-        width: 22vw;
+        width: 25vw;
     }
 
     .aboutMe__phrase, .aboutMe__activities {
         font-size: .8rem;
         padding-top: .3rem;
-        width: 25vw;
+        width: 28vw;
     }
     /* Buena idea dejar paddin entre la frase escondida*/
 
@@ -1257,16 +1261,14 @@ a:link {
     }
     
     .wind--A, .wind--B {
-        background-size: 12%;
-        height: 2rem;
+        background-size: 17%;
+        height: 1rem;
         width: 20vw;
-
-
     }
 
     @keyframes breeze--A {
         0%  {left: 20vh; opacity: 100%;}
-        100% {left: 81vh; opacity: 100%;}
+        100% {left: 83vh; opacity: 100%;}
     }
 
     @keyframes breeze--B {
@@ -1274,46 +1276,118 @@ a:link {
         100% {left: 85vh; top: 5vh;opacity: 100%;}
     }
     
-    
     .bigLeave, .smallLeave-fall, .smallLeave-fall--B {
-        position: absolute;
-        height: 100px;
-        width: 100vh;
-        opacity: 0%;
+        height: 1rem;
+        width: 10vw;
     }
-    /*
+
     .bigLeave {
-        background: url(images/bigLeave.png) no-repeat ;
-        background-position: right;
-        animation: bigLeave 5s infinite;
+        background-size: 25%;
     }
     
     @keyframes bigLeave {
-        0%  {left: 50%; top: 35vh;opacity: 100%;transform: rotateZ(180deg);}
-        50% {left: 80%; top: 40vh;opacity: 100%;transform: rotateZ(-180deg);}
-        100% {left: 100%; top: 42vh;opacity: 100%;transform: rotateZ(-360deg);}
+        0%  {left: 29%; top: 30vh;opacity: 100%;transform: rotateZ(180deg);}
+        50% {left: 40%; top: 35vh;opacity: 100%;transform: rotateZ(-180deg);}
+        100% {left: 58%; top: 37vh;opacity: 100%;transform: rotateZ(-360deg);}
     }
     
     .smallLeave-fall {
-        background: url(images/smallLeave.png) no-repeat ;
-        background-position: right;
-        animation: smallLeaveFall 5s infinite;
+        background-size: 18%;
     }
     
     @keyframes smallLeaveFall {
         0%  {left: 40vh; top: 0vh;opacity: 100%;transform:perspective(300rem) rotateY(1deg);}
-        100% {left: 80vh; top: 85vh;opacity: 100%;transform:perspective(150rem) rotateY(75deg);}
+        100% {left: 80vh; top: 60vh;opacity: 100%;transform:perspective(150rem) rotateY(75deg);}
     }
     
     .smallLeave-fall--B {
-        background: url(images/smallLeave.png) no-repeat ;
-        background-position: right;
-        animation: smallLeaveFallB 4s infinite;
+        background-size: 18%;
     }
     
     @keyframes smallLeaveFallB {
-        0%  {left: 105vh; top: 0vh;opacity: 100%;}
-        100%  {left: 104vh; top: 50vh;opacity: 100%;transform: rotate(360deg);}
+        0%  {left: 40vh; top: 0vh;opacity: 100%;}
+        100%  {left: 100vh; top: 50vh;opacity: 100%;transform: rotate(360deg);}
     }
-    */
+    
+    .meowText {
+    max-width: 7%;
+    top: 26vh;
+    left: 51vw;
+    }
+
+    .helpCat {
+    border: 1px solid #f69c55;
+    font-size: .6rem;
+    height: 7.75vh;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 52vh;
+    width: 50vh;
+    }
+    
+/*
+@keyframes bounceText {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-1.5vh); }
+    100% { transform: translateY(0); }
+}
+
+.helpCat:hover {
+    cursor: pointer;
+}
+
+.helpCat__text--hidden {
+    display: none;
+}
+
+.helpCat__text, .helpCat__text--hidden{
+    margin: auto 0;
+    text-align: center;
+    user-select: none;
+}
+
+.highlightText:hover{
+    cursor: pointer;
+    color: #f69c55;
+    
+}
+
+.helpCat__fakeDoor {
+    display: none;
+    height: 22rem;
+    left: 77%;
+    position: absolute;
+    top: 20vh;
+    width: 10rem;
+}
+
+.helpCat__fakeDoor:hover {
+    background-color: rgba(235, 235, 235, .10);
+    cursor: pointer;
+}
+
+.section-A--cat {
+    background: url(images/cat1.png) no-repeat;
+    background-size: contain;
+    display: none;
+    height: 15vh;
+    left: 72%;
+    position: absolute;
+    top: 54%;
+    transform: rotate(-7deg);
+    width: 22vh;
+}
+
+.section-A--cat2 {
+    background: url(images/cat3.png) no-repeat;
+    background-size: contain;
+    display: none;
+    height: 15vh;
+    left: 73%;
+    position: absolute;
+    top: 52%;
+    transform: rotate(-6deg);
+    width: 22vh;
+}
+*/
 }
