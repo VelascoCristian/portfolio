@@ -1364,6 +1364,10 @@ a:link {
     }
 
     /* Section B */
+
+    .livingRoom {
+        width: 100vw;
+    }
     
     .btn__goBack {
         background-size: 50%;
@@ -1373,8 +1377,7 @@ a:link {
     }
     
     .window {
-        margin-left: -3.25vw;
-        width: 16vw;
+        width: 17vw;
     }
 
     .cloud--A, .cloud--B, .clouds{
@@ -1388,17 +1391,18 @@ a:link {
 
     .technologiesPennants, .softSkillsPennants {
         background-size: 62%;
-        margin-left: 3vw;
+        margin-left: 4vw;
         width: 42vw;
     }
 
     .softSkillsPennants {
-        margin-left: -3.5vw;
-        margin-top: -2vh;
+        margin-left: 2.75vw;
+        margin-top: -1.5vh;
     }
 
     .softSkillBoard {
-        margin-left: -5vw;
+        margin-left: -.5vw;
+        width: 27.5vw;
     }
 
     .bird {
@@ -1413,14 +1417,14 @@ a:link {
     }
 
     .frameFix--A {
-        margin-left: .1vw;
-        width: .375vw;
+        margin-left: -.15vw;
+        width: .48vw;
     }
 
     .frameFix--B, .frameFix--C {
         height: 11vh;
-        margin-left: .1vw;
-        width: .495vw;
+        margin-left: 0vw;
+        width: .51vw;
     }
 
     .helpCat-BowlFood {
@@ -1446,7 +1450,8 @@ a:link {
 
     .pointerOut {
         height: 30vh;
-        width: 25vw;
+        margin-left: -.5vw;
+        width: 28vw;
     }
 
     .helpCat-foodText {
