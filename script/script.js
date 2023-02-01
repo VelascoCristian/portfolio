@@ -71,6 +71,18 @@ const section3Animation = () => {
 const openTheDoor = (section) => {
     document.querySelector(".right").style.setProperty("background","url(images/houseOutsideOpen.png)");
     document.querySelector(".right").style.setProperty("background-position","right");
+    if (isDevice === true) {
+        document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
+        document.querySelector(".right").style.setProperty("width","50.5vw");
+    }
+    /*
+    if (isDevice === true && section === "section-A") {
+        document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
+        document.querySelector(".right").style.setProperty("width","50.5vw");
+    } else if (isDevice === true && section === "section-B") {
+
+    }
+    */
     document.querySelector(".meowText").style.setProperty("display","none");
     document.querySelector(".section-A--cat").style.setProperty("display","none");
     document.querySelector(".bigLeave").style.setProperty("display","none");
@@ -151,6 +163,7 @@ const goBack = (section) => {
         document.getElementById("helpCat__text").innerHTML = `<h3 class="helpCat__text" id="helpCat__text">Oh no, the bowl is empty, can you fill it? ⭩[Click the blue bowl]</h3>`;
         document.querySelector(".softSkillBoard").style.setProperty("display","none");
         document.getElementById("purrText").classList.remove("purrText");
+        document.querySelector(".hidden").style.setProperty("display","none");
         intervalCatMoveABack = setInterval(catMoveA, 300);
         intervalCatMoveBBack = setInterval(catMoveB, 800);
 
@@ -279,6 +292,9 @@ document.getElementById("helpCat-BowlFood").onclick = function(){
     document.querySelector(".helpCat-foodText").style.setProperty("cursor","pointer");
     document.getElementById("purrText").classList.add("purrText");
     document.querySelector(".hidden").style.setProperty("display","block");
+    /*if (isDevice === true) {
+        document.querySelector(".helpCat-BowlFood").style.setProperty("margin-left","-4.5vw");
+    }*/
 }
 
 const hardSkillModal = () => {
