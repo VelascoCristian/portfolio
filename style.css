@@ -914,12 +914,12 @@ a:link {
     background-size: 15px 15px;
     border: 2px solid #f69c55;
     border-radius: 30px;
-    height: 4.5vh;
+    height: 5vh;
     margin-left: 90.5vh;
     position: absolute;
     transition: 300ms ease-in-out;
     top: 2vh;
-    width: 4.5vh;
+    width: 5vh;
 }
 
 /* Monitor proyects */
@@ -1283,7 +1283,6 @@ a:link {
     .aboutMe__phrase {
         font-size: 1.5rem;
     }
-    /* Buena idea dejar paddin entre la frase escondida*/
     
     .right {
         background:  url(images/houseOutside.png) no-repeat;
@@ -1469,5 +1468,85 @@ a:link {
 
     .purrText {
         margin-left: -4.5vw;
+    }
+
+    /* Section C*/
+    .thanks {
+        font-size: 1.125rem;
+        height: 12vh;
+    }
+
+    .toyMouse {
+        background-size: 90%;
+        
+    }
+
+    .messyBooks {
+        height: 20vh;
+        margin-top: 3vh;
+        margin-left: -3vw;
+        width: 15vw;
+    }
+    
+    .monitor {
+        height: 53.6vh;
+        margin-left: 2.4vw;
+        width: 49.5vw;
+    }
+
+    .monitorFigure {
+        margin-left: 4.75vw;
+        margin-top: -2vh;
+        width: 40vw;
+    }
+
+    .monitorFigcaption {
+        margin-left: -11vw;
+        width: 35vw;
+    }
+
+    .titleFront {
+        font-size: .8125rem;
+    }
+
+    .details {
+        font-size: .7rem;
+        max-height: 26vh;
+        overflow-y: scroll;
+    }
+
+    #show-back {
+        font-size: .5rem;
+        margin: 1vh auto;
+    }
+
+    .back {
+        max-height: 42vh;
+    }
+
+    .back__header {
+        font-size: .7rem;
+        margin-bottom: 1vh;
+    }
+
+    #show-front {
+        font-size: .5rem;
+    }
+
+    .detailsBack {
+        font-size: .7rem;
+        margin-left: -5vw !important;
+        width: 50vw;
+    }
+
+    .titleProyect {
+        font-size: .8rem;
+        margin-left: -3.125vw;
+        width: auto;
+    }
+
+    .previous, .goOn {
+        background-size: 50%;
+        width: 3vw;
     }
 }
