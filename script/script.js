@@ -44,6 +44,10 @@ const section2Animation = () => {
 
 const section3Animation = () => {
     document.querySelector(".bedRoom").style.setProperty("background","url(images/bedRoom2.png) no-repeat");
+    if (isDevice === true) {
+        document.querySelector(".bedRoom").style.setProperty("background-size","100vw 100vh");
+        document.querySelector(".bedRoom").style.setProperty("width","95.8vw");
+    }
     document.querySelector("#purrText").style.setProperty("display","none");
     document.querySelector(".cloud--A").style.setProperty("display","none");
     document.querySelector(".cloud--B").style.setProperty("display","none");
@@ -75,14 +79,6 @@ const openTheDoor = (section) => {
         document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
         document.querySelector(".right").style.setProperty("width","50.5vw");
     }
-    /*
-    if (isDevice === true && section === "section-A") {
-        document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
-        document.querySelector(".right").style.setProperty("width","50.5vw");
-    } else if (isDevice === true && section === "section-B") {
-
-    }
-    */
     document.querySelector(".meowText").style.setProperty("display","none");
     document.querySelector(".section-A--cat").style.setProperty("display","none");
     document.querySelector(".bigLeave").style.setProperty("display","none");
@@ -177,7 +173,8 @@ const goBack = (section) => {
     }
 
     if (section === "section-B") {
-        
+        document.getElementById("helpCat__text").innerHTML = `<h3 class="helpCat__text" id="helpCat__text">Oh no, the bowl is empty, can you fill it? ⭩[Click the blue bowl]</h3>`;
+        document.getElementById("helpCat__text").style.setProperty("cursor","default");
         document.querySelector(".toyMouse").style.setProperty("display","none");
         document.querySelector(".thanks").style.setProperty("display","none");
         document.querySelector(".pointer3").style.setProperty("display","none");
@@ -272,7 +269,6 @@ const technologiesModal = (url, board) => {
         elementValue(".span7","Bootstrap");
         elementValue(".span8","Adobe Photoshop");
 
-
     } else if (board === "soft") {
         elementValue(".span1",`Self-confidence <a href="/files/Accenture.pdf">certificate</a>`);
         elementValue(".span2",`Communication <a href="/files/Accenture.pdf">certificate</a>`);
@@ -280,7 +276,6 @@ const technologiesModal = (url, board) => {
         elementValue(".span4",`Focus <a href="/files/Focus.pdf">certificate</a>`);
         elementValue(".span5",`Habits <a href="/files/Habits.pdf">certificate</a>`);
         elementValue(".span6","Scrum");
-
     }
 }
 
@@ -292,9 +287,6 @@ document.getElementById("helpCat-BowlFood").onclick = function(){
     document.querySelector(".helpCat-foodText").style.setProperty("cursor","pointer");
     document.getElementById("purrText").classList.add("purrText");
     document.querySelector(".hidden").style.setProperty("display","block");
-    /*if (isDevice === true) {
-        document.querySelector(".helpCat-BowlFood").style.setProperty("margin-left","-4.5vw");
-    }*/
 }
 
 const hardSkillModal = () => {
@@ -316,8 +308,6 @@ const moveMouse = () => {
     document.querySelector(".toyMouse").style.setProperty("animation","mouseMove 10s");
     setInterval(dontMoveMouse, 10200);
 }
-
-
 
 const walk = () => {
     document.querySelector(".bedRoom").style.setProperty("animation","walk 5s");
@@ -535,7 +525,7 @@ const goToContact = (section) => {
     document.querySelector(".contact").style.display = "block";
 }
 
-const typesofErrors = [
+const typesOfErrors = [
     "valueMissing",
     "typeMismatch",
 ];
@@ -556,7 +546,7 @@ const errorMessage = {
 
 function showErrorMessage(typeOfInput, input) {
     let message = "";
-    typesofErrors.forEach((error) => {
+    typesOfErrors.forEach((error) => {
         if (input.validity[error]) {
             console.log(typeOfInput, error);
             console.log(input.validity[error]);
@@ -581,7 +571,7 @@ function validation(input) {
 
 
 const inputs = document.querySelectorAll("input");
-const textareas = document.querySelectorAll("textarea");
+const textAreas = document.querySelectorAll("textarea");
 
 inputs.forEach((input) => {
     input.addEventListener("blur", (input) => {
@@ -589,7 +579,7 @@ inputs.forEach((input) => {
     });
 });
 
-textareas.forEach((textarea) => {
+textAreas.forEach((textarea) => {
     textarea.addEventListener("blur", (textarea) => {
         validation(textarea.target);
     });
@@ -604,4 +594,12 @@ const adviceGone = () => {
     isDevice = true;
 }
 
+window.addEventListener("orientationchange", () => {
+    getOrientation();
+});
 
+function getOrientation() {
+    if (window.matchMedia("(orientation: landscape)").matches) {
+        location.reload();
+    }
+};
