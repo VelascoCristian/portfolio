@@ -681,40 +681,41 @@ section {
 }
 
 .span1, .span2, .span3, .span4, .span5, .span6, .span7 , .span8  {
-    font-size: .7rem;
+    font-size: 1rem;
     height: 21.5vh;
     opacity: 0;
     position: absolute;
+    top: -15vh;
     width: 23.5vh;
 }
 
 .span2 {
-    left: 19%;
+    left: 13.5vw;
 }
 
 .span3 {
-    left: 37%;
+    left: 26vw;
 }
 
 .span4 {
-    left: 56%;
+    left: 39vw;
 }
 
 .span5 {
-    left: 73%;
+    left: 51.5vw;
 }
 
 .span6 {
-    left: 90%;
+    left: 64vw;
 }
 
 .span7 {
-    top: 34%;
+    top: 8vh;
 }
 
 .span8 {
-    top: 34%;
-    left: 20%;
+    top: 8vh;
+    left: 13.5vw;
 }
 
 .span1:hover, .span2:hover, .span3:hover, .span4:hover,
@@ -745,7 +746,7 @@ a:link {
     border-radius: 30px;
     display: none;
     height: 5vh;
-    left: 93vw;
+    left: 88.5vw;
     position: relative;
     transition-duration: 0.4s;
     transition-delay: 0.2s;
@@ -1244,20 +1245,6 @@ a:link {
         overflow: hidden
     }
 
-    /*
-
-
-    */
-
-    .section-A--cat2 {
-        left: 73vw;
-        top: 52vh;
-    }
-
-    /*
-
-    */
-
     body {
         height: 99.999vh;
     }
@@ -1312,7 +1299,7 @@ a:link {
     
     .right {
         background:  url(images/houseOutside.png) no-repeat;
-        background-size: 61.8vw 100vh;
+        background-size: 62vw 100vh;
         background-position: right;
         width: 50.75vw;
     }
@@ -1341,7 +1328,6 @@ a:link {
 
     .bigLeave {
         background-size: 99%;
-        
     }
     
     @keyframes bigLeave {
@@ -1386,6 +1372,11 @@ a:link {
         position: absolute;
         top: 20vh;
         width: 12.5vw;
+    }
+
+    .section-A--cat2 {
+        left: 73vw;
+        top: 52vh;
     }
 
     /* Section B */
@@ -1503,8 +1494,9 @@ a:link {
 
     .span1:hover, .span2:hover, .span3:hover, .span4:hover,
     .span5:hover , .span6:hover, .span7:hover, .span8:hover {
-    padding-top: 5%;
-    word-wrap: break-word;
+        font-size: .7rem;
+        padding-top: 5%;
+        word-wrap: break-word;
     }
 
     span a {
@@ -1513,6 +1505,8 @@ a:link {
 
     .btn__closeModal {
         background-size: 60%;
+        margin-top: -2vh;
+        margin-left: .5vw;
     }
 
     /* Section C*/
