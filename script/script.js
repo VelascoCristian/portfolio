@@ -103,6 +103,11 @@ const catSettings = () => {
     document.querySelector(".section-A--cat").style.setProperty("top","54%");
     document.querySelector(".section-A--cat").style.setProperty("transform","rotate(-7deg)");
     document.querySelector(".section-A--cat").style.setProperty("width","22vh");
+
+    if (isDevice) {
+        document.querySelector(".section-A--cat").style.setProperty("left","72vw");
+        document.querySelector(".section-A--cat").style.setProperty("top","54vh");
+    }
 }
 
 const catMoveA = () => {
@@ -381,6 +386,101 @@ showFrontBtn.addEventListener("click", function () {
 let totalProyects = 3, proyect = 0;
 attachEvents();
 
+document.querySelector(".previous").addEventListener('click', function() {
+    proyect--;
+    if (proyect < 0) proyect = totalProyects - 1;
+    if (proyect === (totalProyects)) proyect = 0;
+    if (proyect === 0) {
+        //HangMan game
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Hangman game (Spanish).</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                Using a row of dashes, the word to be guessed is represented, giving the number of letters (in the form of dashes). If the guessing player suggests a letter that appears in the word, the other player writes it in all its correct positions. If the letter is not correct, it is shown on the hanged stickman figure as a tally mark.<br>
+                · More than 40 words.<br>
+                · You have 7 attempts per word.<br>
+                · It does not have words that use "ñ" or umlauts.<br>
+                · Possibility to add your own word.<br>
+                Can you save the person?... Let's find out.
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://velascocristian.github.io/Juego-del-ahorcado/" target="_blank"><img class="imgProyect" src="images/proyectHangGame.png" alt="hangman game"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Hangman game.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">The classic hangman game. HTML5 - CSS3 - JAVASCRIPT.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`;
+    } else if (proyect === 1) {
+        // Encrypter
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Simple Encrypter.</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                'The encryption "keys" used are the following: <br>
+                ·The letter "e" is converted to "enter" <br>
+                ·The letter "i" is converted to "imes" <br>
+                ·The letter "a" is converted to "ai" <br>
+                ·The letter "o" is converted to "ober" <br>
+                ·The letter "u" is converted to "ufat" <br>
+                <br>Requirements: <br>
+                ·Uppercase letters are set to lowercase <br>
+                ·Special characters are ignored';
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://velascocristian.github.io/Encriptador/" target="_blank"><img class="imgProyect" src="images/proyectEncrypter.png" alt="Encrypter"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Encrypter.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">A simple tool capable of encrypting and/or a string of text. HTML5 - CSS3 - JAVASCRIPT.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`;
+    } else if (proyect === 2) {
+        document.querySelector(".monitorFigure").innerHTML = `
+        <div class="back">
+            <div class="back__header">
+                <h2 class="titleBack">Personal Github.</h2>
+                <button id="show-front">Back to front</i></button>
+            </div>
+            <p class="detailsBack">
+                I will upload more projects soon, while you have a look in my Github repository.
+            </p>
+        </div>
+        <div class="front">
+            <div class="image">
+                <a class="link" href="https://github.com/VelascoCristian" target="_blank"><img class="imgProyect" src="images/proyectSoon.png" alt="myGithub"></a>
+            </div>
+            <figcaption class="monitorFigcaption">
+                <h4 class="titleFront">Personal Github.<b class="badge"><img src="images/plus.png" class="minus" alt="plus"></b></h4>
+                <div class="details">
+                    <p class="details__content">While you have a look in my Github repository.
+                        <button id="show-back">Read the back<i class="plus"></i></button>
+                    </p>
+                </div>
+            </figcaption>
+        </div>`
+    }
+    attachEvents();
+});
+
 document.querySelector(".goOn").addEventListener('click', function() {
     proyect++;
     
@@ -584,10 +684,6 @@ textAreas.forEach((textarea) => {
         validation(textarea.target);
     });
 });
-
-const send = () => {
-    alert("Mail sent");
-}
 
 const adviceGone = () => {
     document.querySelector(".adviceSmartPhone").style.display = "none"
