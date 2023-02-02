@@ -48,6 +48,7 @@ html {
 
 .p-advice {
     display: none;
+    font-size: .8rem;
     padding: 2vh 8vw;
     text-align: center;
 }
@@ -61,8 +62,8 @@ html {
     border: 2px solid #f69c55;
     border-radius: 1.25rem;
     display: none;
-    height: 15vh;
-    margin: 5vh auto;
+    height: 10vh;
+    margin: 3vh auto;
     width: 15vw;
 }
 
@@ -1263,6 +1264,10 @@ a:link {
 
     .adviceSmartPhone, .adviceImg, .p-advice, .adviceButton {
         display: block;
+    }
+
+    .adviceImg {
+        max-width: 50vw;
     }
 
     .left {
