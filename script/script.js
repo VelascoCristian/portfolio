@@ -165,12 +165,13 @@ const goBack = (section) => {
         document.querySelector(".softSkillBoard").style.setProperty("display","none");
         document.getElementById("purrText").classList.remove("purrText");
         document.querySelector(".hidden").style.setProperty("display","none");
+        document.querySelector(".pointerOut").style.setProperty("display","none");
         intervalCatMoveABack = setInterval(catMoveA, 300);
         intervalCatMoveBBack = setInterval(catMoveB, 800);
 
         /* Styles required for devices*/
         if (isDevice === true) {
-            document.querySelector(".right").style.setProperty("background-size","61.5vw 100vh");
+            document.querySelector(".right").style.setProperty("background-size","62vw 100vh");
             document.querySelector(".right").style.setProperty("width","50.5vw");
             document.querySelector(".pointerOut").style.setProperty("display","none");
         }
@@ -275,11 +276,11 @@ const technologiesModal = (url, board) => {
         elementValue(".span8","Adobe Photoshop");
 
     } else if (board === "soft") {
-        elementValue(".span1",`Self-confidence <a href="/files/Accenture.pdf">certificate</a>`);
-        elementValue(".span2",`Communication <a href="/files/Accenture.pdf">certificate</a>`);
-        elementValue(".span3",`Productivity <a href="/files/Productivity.pdf">certificate</a>`);
-        elementValue(".span4",`Focus <a href="/files/Focus.pdf">certificate</a>`);
-        elementValue(".span5",`Habits <a href="/files/Habits.pdf">certificate</a>`);
+        elementValue(".span1",`Self-confidence <a href="files/Accenture.pdf">certificate</a>`);
+        elementValue(".span2",`Communication <a href="files/Accenture.pdf">certificate</a>`);
+        elementValue(".span3",`Productivity <a href="files/Productivity.pdf">certificate</a>`);
+        elementValue(".span4",`Focus <a href="files/Focus.pdf">certificate</a>`);
+        elementValue(".span5",`Habits <a href="files/Habits.pdf">certificate</a>`);
         elementValue(".span6","Scrum");
     }
 }
